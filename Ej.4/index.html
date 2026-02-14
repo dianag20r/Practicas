@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>HTML Formularios</h1>
+    <form action="" method="get">
+    <fieldset>
+        <legend>Datos Personales</legend>
+            
+            <label for="fname">Primer nombre:</label>
+            <input type= "text" placeholder="Nombre" id="fname"><br><br>
+            <div>
+                <label for="fapellido">Apellido:</label>
+                <input type= "text" placeholder="Apellido" id="fapellido"><br><br>
+            </div>
+            <div> 
+                <label for="email">Correo electrónico:</label>
+                <input type= "email" placeholder="Correo" id="email"><br><br>
+            </div>
+            <div>
+                <label for="password">Contraseña:</label>
+                <input type="password" placeholder="*********" id="password"><br><br>
+            </div>
+            <div>
+                <label for="Age">Edad:</label>
+                <input type="number" placeholder="Edad" id="Age" min="0"><br><br>
+            </div>
+            <button>Enviar</button>
+    </fieldset>
+    
+    <fieldset>
+        <Legend>Preferencias</Legend>
+        <button>Enviar</button>
+       <div>
+       <label for="genero">Genero de peliculas</label>
+        <select id="genero" name="Pelicula">
+            <option value="">Elegir opcion</option>
+            <option value="1">Accion</option>
+            <option value="2">Comedia</option>
+            <option value="3">Terror</option>
+        </select>
+       </div> 
+       <div>
+         <label for="terminos">Aceptar términos y condiciones</label>
+         <input type="checkbox" id="terminos" name="terms" value="yes"><br><br>
+       </div>
+       <div>
+            <p>Elegir una opción</p>
+            <label for="radio_pre">Accion</label>
+            <input type="radio" id="radio_pre" name="radioPrefs" value="A">
+
+            <label for="radio_pre2">Comedia</label>
+            <input type="radio" id="radio_pre2" name="radioPrefs" value="B">
+
+            <label for="radio_pre3">Terror</label>
+            <input type="radio" id="radio_pre3" name="radioPrefs" value="C">
+       </div>
+
+       <div><input type="range" name="range" min="0" max="25"/></div>
+       <div><input type="color" name="color"/></div><br><br>
+       
+       <div>
+       <label for="avatar">Foto de perfil</label>
+       <input type="file" id="avatar" accept="image/png, image/jpeg, image/jpg" name="file"/>
+       </div>
+      
+       <div>
+        <lable for="cambiarfondo"></lable>
+        <button type="button" id="cambiarfondo">para javascript</button><br><br>
+        <button type="submit">Enviar respuestas</button>
+       </div>
+        
+    </fieldset>
+    </form>
+
+    <form action="https://www.youtube.com/results">
+        <fieldset>
+            <legend>Busqueda</legend>
+            <input type="text" name="search_query"/>
+            <button>BuscarYoutube</button>
+        </fieldset>
+        </form>
+</body>
+</html>
