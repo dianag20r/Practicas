@@ -1,0 +1,99 @@
+/*
+(2)  Header 1
+- Peso de fuente normal "normal" (que no salga en negritas)
+-Decoración de línea de algún color ondulada arriba y abajo
+-Espaciado entre letras de 15 pixeles
+-Tamaño de fuente de 50 pixeles
+-Interlineado "Altura" de la línea de 2
+-Alineado al centro*/
+html
+{
+    font-family: Arial,Arial, Helvetica, sans-serif;
+}
+h1
+{
+    font-weight: normal;
+    text-decoration: slateblue wavy underline overline;
+    letter-spacing: 15px;
+    font-size: 50px;
+    line-height: 2;
+    text-align: center;
+}
+/*(3)  Header 2
+-Fondo color negro escrito en rgb(#,#,#)
+-Color de letra blanco escrito en hexadecimal #------
+-Alineado al centro*/
+h2
+{
+  background-color: rgb(0, 0, 0);  
+  color: #ffffff;
+  text-align: center;
+
+}
+/*(4)  Header 3 al 6
+-Color de texto negro
+-Color de fondo Pizarra (slategray)
+-Alineado a la izquierda
+-Ancho de 50% para el header (width)*/
+
+h3,h4,h5,h6
+{
+    color: black;
+    background-color: slategray;
+    text-align: left;
+    width: 50%;
+}
+/*(ul)  Lista sin ordenar
+-Color de fondo gris (gray)
+-Peso de fuente normal (sus hijos con bolder se mantienen en normal)*/
+ul
+{
+    background-color: gray;
+    font-weight: 300;
+}
+/*(ol)  Lista ordenada
+-Color de fondo cian (cyan)
+-Peso de fuente normal (sus hijos con bolder se convierten en negritas)*/
+ol
+{
+    background-color:cyan;
+    font-weight: 500;
+}
+/*(7)  Elemento de lista (li)
+-Color de letra azul
+-Peso de fuente (más fuerte que el padre - relativo)
+-Color de fondo Verde en HSLA
+->(Tono de 135, saturación 100%, luminosidad 50% alfa 0.5)*/
+li
+{
+    color:blue;
+    background-color: hsla(135, 100%, 50%, 0.5);
+    font-weight: bolder;
+}
+
+/*(8)  Anclas o hipervínculos (a)
+-Color negro
+-Quitar decoración de texto (sin underline)
+*/
+a
+{
+    color: black;
+    text-decoration: none;
+}
+/*(9)   #firstsection
+-Fondo color negro en rgba con alfa de 0.3*/
+#firstsection
+{
+    background-color: rgba(0,0,0,0.3);
+}
+/*
+(10)  #spanp
+-color rosa
+-fondo color negro
+-Peso de fuente en negritas*/
+#spanp
+{
+    color: pink;
+    background-color: black;
+    font-weight: bold;
+}
