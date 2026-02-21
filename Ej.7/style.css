@@ -1,0 +1,76 @@
+p{
+    text-align: justify;
+}
+
+*{ 
+    transition: linear 2s;
+ }
+
+#enero{
+    border-style: solid;
+    border-color: rgb(255, 0, 157);
+    border-width: 0.8rem;
+    padding:2rem;
+    border-radius: 1rem;
+    overflow: scroll;
+    width:85%;
+    height: 70pt;
+    margin:2pt;
+}
+
+#febrero{
+    border-style:dotted;
+    border-color: rgb(0, 174, 255);
+    border-width: 1rem;
+    padding: 4rem;
+    height:10rem;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 90%;
+    height: 200pt;
+    margin:0pt;
+    display: inline-block;
+}
+#marzo{
+    border-style: dotted;
+    border-color: black;        
+    border-width: 1rem;
+    padding:5rem;
+    height:6rem;
+    border-top-left-radius: 20%;
+    box-sizing: content-box;
+    margin:30pt;
+    overflow: auto;
+}
+#abril{
+    border-style: dashed;
+    border-color: rgb(180, 0, 150);
+    border-width: 1rem;
+    padding:4rem;
+    border-top-right-radius:2rem;
+    margin:30pt;
+}
+#mayo{
+    border-style: inset;
+    border-color: cyan;
+    border-width: 1rem;
+    padding:1rem;
+    border-top-left-radius: 3rem;
+    margin:30pt;
+    position: sticky;
+    top:0.5pt;
+    right:1pt;
+}
+#junio{
+    border-style: solid;
+    border-color: grey;
+    border-left-color: gray;
+    border-top-color: rgb(0, 84, 180);
+    border-width: 2rem;
+    padding:5rem;
+    border-radius: 50%;
+    margin:30pt;
+    position:sticky;
+    top:0;
+}
+
