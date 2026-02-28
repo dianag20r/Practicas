@@ -1,0 +1,172 @@
+body {
+  text-align: center;
+  font-size: 3rem;
+}
+
+button {
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  font-size: 4rem;
+}
+
+section {
+  border: 1rem;
+  border-style: solid;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  padding: 1rem;
+  border-color: slategray;
+}
+
+#button1 {
+    transition-duration: 3s;
+}
+
+#button1:hover {
+    background-color: rgba(252, 136, 194, 0.986);
+    transform: rotate(6.24rad);
+    transform-origin: right bottom;
+
+}
+
+#button2 {
+    transition-duration: 1s;
+}
+
+#button2:hover {
+    background-color: rgb(191, 123, 255);
+    opacity: 40%;
+    transform: skewX(-40deg);
+
+}
+
+#button3 {
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+    
+}
+
+#button3:hover {
+    color: white;
+    background-color: black;
+    
+}
+
+#button4 {
+    transition-timing-function: cubic-bezier(0,1.68,.83,.67);
+}
+
+#button4:hover {
+    background-color:aqua;
+    transform: rotateX(1440deg);
+    opacity: 0%;
+}
+
+#button5 {
+    transition-duration: 1s;
+    transition-timing-function: steps(5,end);
+}
+
+#button5:hover {
+    transform: scale3d(0.1,0.1,1);
+    background-color:rgb(123, 207, 255)
+}
+
+#button6 {
+    transition-property: background-color, transform;
+    transition-duration: 8s, 3s;
+    transition-timing-function: ease-in-out, steps(20, jump-both);
+}
+
+#button6:hover {
+    transform: translate(-100%, 150%);
+    background-color: rgb(98, 105, 112);
+    color: rgb(112, 112, 228);
+}
+
+@keyframes cambiocolor {
+    from{
+        background-color:rgb(141, 0, 141);
+        color:rgb(185, 8, 141);
+    }
+    to {
+        background-color: rgb(204, 2, 177);
+        color:rgb(255, 3, 234);
+    }
+}
+
+#button7:hover {
+    animation-timing-function: linear;
+    animation-name: cambiocolor;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes button8 {
+    0%{
+        transform: translateX(0%);
+        background-color:rgb(255, 119, 146);
+    }
+    100%{
+        transform: translateX(100%);
+        background-color:rgb(255, 80, 211);
+    }
+}
+
+#button8:hover {
+    animation-name: button8;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes button9 {
+    0%,
+    100%{
+        background-color: darkblue;
+    }
+    33%{
+        background-color: darkcyan;
+    }
+    66%{
+        background-color: cornflowerblue;
+    }
+}
+
+#button9:hover {
+    animation-name: button9;
+    animation-duration: 3s;
+    animation-timing-function:linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+
+#button9:active{
+    animation-play-state: paused;
+}
+
+@keyframes button10 {
+    0%,
+    32%,
+    100% {
+        background-color: rgb(255, 0, 0);
+    }
+    33%,
+    65% {
+        background-color: rgb(255, 255, 0);
+    }
+    66%,
+    99% {
+        background-color: rgb(0, 255, 0);
+    }
+}
+
+#button10:hover {
+    animation-name: button10; 
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction:alternate;
+}
