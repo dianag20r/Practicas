@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
       <nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark sticky-bottom">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Diana</a>
@@ -23,7 +22,7 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav me-auto mb-2 mb-md-0">
@@ -33,17 +32,22 @@
             <li class="nav-item">
               <a class="nav-link" href="#">Contacto</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Productos</a>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Computadoras</a></li>
+                <li><a class="dropdown-item" href="#">Celulares</a></li>
+                <li><a class="dropdown-item" href="#">Audifonos</a></li>
+              </ul>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <div class="container-fluid">
-    <h1 class="display-1">Ejemplo Forms</h1>
-      <div class="row fw-bold font-monospace justify-content-center">
+    
+  <div class="container-fluid"><br>
+    <div class="row fw-bold font-monospace justify-content-center">
         <div class="col-6 img-thumbnail bg-secondary mb-4">
           <form>
             <div class="row">
@@ -61,7 +65,7 @@
               <input type="email" id="form2" class="form-control" />
             </div>
             <div class="form-outline mb-4">
-              <label class="form-label" for="form3">Mensaje</label>
+              <label class="form-label" for="form3">Comentarios</label>
               <textarea class="form-control" id="form3" rows="4"></textarea>
             </div>
             <div class="form-check d-flex justify-content-around mb-4">
@@ -73,25 +77,22 @@
                   id="form4"
                   checked
                 />
-                <label class="form-check-label" for="form4"> Acepto las condiciones</label>
+                <label class="form-check-label" for="form4"> Acepto términos y condiciones</label>
               </div>
-              <button type="submit" class="btn btn-primary btn-block col-5 col-md-4"> Enviar Aplicación</button>
+              <button type="submit" class="btn btn-primary btn-block col-5 col-md-4"> Enviar</button>
             </div>
           </form>
-        </div>
-      </div>
+       </div>
     </div>
+  </div>
+
 
     <div class="container-fluid">
-        <h2 class="display-3">Alerts!</h2>
-        <div class="alert alert-info" role="alert"> Usuario autorizado</div>
-        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <div class="alert alert-success" role="alert"> Usuario autorizado</div>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
             <strong>ERROR!</strong> Credenciales incorrectas.
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     </div>  
-
 </body>      
 </html> 
-
-
