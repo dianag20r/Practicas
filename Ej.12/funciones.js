@@ -13,25 +13,31 @@ let signosChinos = [
   "Cabra",
 ];
 let calculaSigno = function () {
-  let anio = parseInt(prompt("Escribe tu año de nacimiento: "));
+  let anio = parseInt(prompt("Ingresa tu año de nacimiento: "));
+  if (isNaN(anio)) {
+    console.log("Por favor ingresa un año válido");
+    return;
+  }
   let signo = signosChinos[anio % 12];
   console.log(`Tu año chino es ${signo}`);
 };
 
 let adivinaNum = function () {
-  let num = Math.floor(Math.random() * 99 + 1);
+  let num = Math.floor(Math.random() * 100 + 1);
   for (let i = 1; i < 11; i++) {
     let respuesta = parseInt(prompt("Adivina un numero (1-100): "));
     let n = 10 - i;
-    if (num > respuesta) {
-      console.log(`El numero a adivinar es mayor, te quedan ${n} intentos`);
+
+    if (isNaN(respuesta)) {
+      alert(`Ingresa un numero válido, te quedan ${n} intentos`);
+    } else if (num > respuesta) {
+      alert(`El número a adivinar es mayor, te quedan ${n} intentos`);
     } else if (num < respuesta) {
-      console.log(`El numero a adivinar es menor, te quedan ${n} intentos`);
-    } else if (num == respuesta) {
-      alert(`Felicidades acertaste!!, te tomo ${i} intentos`);
-      break;
+      alert(`El número a adivinar es menor, te quedan ${n} intentos`);
     } else {
-      alert(`Error, ingresa nuevamente, te quedan ${n} intentos`);
+      alert(`Felicidades acertaste!!, te tomo ${i} intentos`);
+      return;
     }
   }
+  alert(`Perdiste. El número era ${num}`);
 };
