@@ -1,6 +1,6 @@
 class LikeSystem {
   constructor() {
-    this.like = 0;
+    this.likes = 0;
   }
   like() {
     this.likes++;
@@ -9,7 +9,6 @@ class LikeSystem {
     this.likes--;
   }
   setLikes(value) {
-    //cambiar valor, valor de enterada
     this.likes = value;
   }
   getLikes() {
@@ -21,70 +20,105 @@ class Comment {
   constructor(user = "", comm = "") {
     this.user = user;
     this.comm = comm;
-    this.LikeSystem = new LikeSystem();
+    this.likes = 0;
+    this.likeSystem = new LikeSystem();
   }
-
   printComment() {
     console.log(`${this.user}:${this.comm}`);
   }
-
-  //Para LikeSystem
   like() {
-    this.LikeSystem.like();
+    this.likeSystem.like();
+    this.likes = this.likeSystem.getLikes();
   }
   dislike() {
-    this.LikeSystem.dislike();
-  }
-  getlikes() {
-    console.log(this.LikeSystem.likes);
+    this.likeSystem.dislike();
+    this.likes = this.likeSystem.getLikes();
   }
 }
-
-let comm1 = new Comment("Mario", "El gato lo ataco");
 
 class video {
-  constructor(seconds = 0, name = "") {
+  constructor(minutes = 0, seconds = 0, name = "") {
     this.name = name;
-    this.seconds = seconds % 60;
-    this.minutes = Math.floor(minutes/60);
-    this.LikeSystem = new LikeSystem();
-    this.Comment = [];
+    this.minutes = minutes;
+    this.seconds = seconds;
+    this.likes = 0;
+    this.likeSystem = new LikeSystem();
+    this.comments = [];
   }
 
-  getCommentsNum(){
-    console.log(this.comments.length);
+  getCommentsNum() {
+    return this.comments.length;
   }
-  printTime(){
-    console.log(`${this.minutes}:${this.seconds}`); //imprima dos posiciones en cada uno
+
+  printTime() {
+    let min = this.minutes;
+    let sec = this.seconds;
+
+    if (min < 10) {
+      min = "0" + min;
+    }
+    if (sec < 10) {
+      sec = "0" + sec;
+    }
+    console.log(`${min}:${sec}`);
   }
-  addComment(comment){
-    this.comments.push(comment); //que no añada un numero
+
+  addComment(comment) {
+    this.comments.push(comment);
   }
-  printComments(){
-    try{
-    for(let comment of this.comments){
+
+  printComments() {
+    let numero = 1;
+    try {
+      for (let comment of this.comments) {
+        console.log(`Comentario ${numero}:`);
         comment.printComment();
-    }
-    }
-    catch(e){
-        console.log(this.comments);
+        numero++;
+      }
+    } catch (e) {
+      console.log(this.comments);
     }
   }
 
-    like() {
-    this.LikeSystem.like();
+  like() {
+    this.likeSystem.like();
+    this.likes = this.likeSystem.getLikes();
   }
+
   dislike() {
-    this.LikeSystem.dislike();
+    this.likeSystem.dislike();
+    this.likes = this.likeSystem.getLikes();
   }
-  getlikes() {
-    console.log(this.LikeSystem.getlikes());
-  }
-}  
 }
 
-const video1 = new Video(1,30, "perritos comiendo");
-const com1 = new Comment("Mario", "El gato lo atacó");
+const com1 = new Comment("Mario", " El gato lo atacó");
+const com2 = new Comment("Lucía", " Se asustó");
+const com3 = new Comment("Juan", " Al menos ganó");
+
+const video1 = new video(1, 30, "perritos comiendo");
+const video2 = new video(3, 45, "gatos peleando");
 
 com1.printComment();
-console.log(`El video1 tiene ${video1.likes} likes`);
+com2.printComment();
+com3.printComment();
+
+video1.like();
+video2.like();
+video2.like();
+
+com1.like();
+
+console.log(`\n VIDEO: ${video1.name} `);
+console.log(`\nEl video 1 tiene ${video1.likes} likes`);
+video1.printTime();
+video1.addComment(com1);
+video1.addComment(com2);
+video1.printComments();
+
+console.log(`\n VIDEO: ${video2.name} `);
+console.log(`\nEl video 2 tiene ${video2.likes} likes`);
+video2.printTime();
+video2.addComment(com3);
+video2.addComment(com2);
+video2.addComment(com1);
+video2.printComments();
