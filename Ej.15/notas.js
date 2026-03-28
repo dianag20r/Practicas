@@ -59,7 +59,6 @@ const {
 function printData({ firstName: fname, lastName: lname }) {
   return `Trabajador:${fname} :${lname}`;
 }
-
 console.log(printData(trabajador));
 
 const inventario = [
@@ -125,12 +124,12 @@ const inventario = [
 ];
 
 let prodStock = inventario.filter((prod) => prod.maxStock >= 20);
-Let prodStock=inventario.filter(({maxStock}) => maxStock >= 20);
+//let prodStock = inventario.filter(({ maxStock }) => maxStock >= 20);
 
-let MappedStock = prodStock.map(({ description, stock, maxStock:max }) => {
+let MappedStock = prodStock.map(({ description, stock, maxStock: max }) => {
   return `${description} tiene un stock de ${stock}/${max}`;
 });
 
-muchoStock.map(({description,stock,maxStock})=>{
-    return `${description} tiene un stock de ${stock}/${maxStock}`
-})
+muchoStock.map(({ description, stock, maxStock }) => {
+  return `${description} tiene un stock de ${stock}/${maxStock}`;
+});
