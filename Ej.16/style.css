@@ -1,0 +1,33 @@
+#idYellow {
+	background-color: yellow;
+}
+#idGreen {
+	background-color: green;
+}
+
+.purpleStrip {
+	color: purple;
+	text-decoration: dotted underline violet;
+}
+
+.classGrey {
+	background-color: slategrey;
+}
+
+.mediumFont {
+	font-size: 4em;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.roundImg {
+	max-width: 8%;
+	border-radius: 50%;
+	border: 0.2rem dotted black;
+}
+
+img {
+	max-width: 25%;
+	height: auto;
+	margin: 5px;
+	vertical-align: middle;
+}
